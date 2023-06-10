@@ -21,8 +21,8 @@ private class WrongLoginException extends Exception{
     public boolean check(String login, String password){
     boolean result=true;
     try {
-        if(login.length()>21) throw new WrongLoginException("login length must be less than 20");
-        if(password.length()>21) throw new WrongPasswordException("Password length must be less than 20");
+        if(login.length()>19) throw new WrongLoginException("login length must be less than 20");
+        if(password.length()>19) throw new WrongPasswordException("Password length must be less than 20");
 
         for (Character a : login.toCharArray()) {
             if (!checkCharacter(a))
